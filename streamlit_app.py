@@ -26,11 +26,10 @@ streamlit.dataframe(fruits_to_show)
 
 # Display fruityvice api response
 streamlit.header('Fruity Fruit Advice!')
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response.json()) #write the data to the screen
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/ + "kiwi")
 
 #normalizing the JSON response
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-# display the JSON in normalized form
+# display the JSON in normalized table visual form
 streamlit.dataframe(fruityvice_normalized)
 
