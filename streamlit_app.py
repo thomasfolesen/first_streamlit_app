@@ -33,7 +33,7 @@ def get_fruityvice_data(this_fruit_choice):
   return fruityvice_normalized
 
 streamlit.header('Fruity Fruit Advice!')
-streamlit.header(streamlit.dataframe(get_fruityvice_data("Kiwi")))
+streamlit.dataframe(get_fruityvice_data("Kiwi"))
 """
 try:
   fruit_choice = streamlit.text_input('What fruit would you like information about?')
