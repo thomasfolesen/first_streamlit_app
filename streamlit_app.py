@@ -31,8 +31,9 @@ def get_fruityvice_data(this_fruit_choice):
   #normalizing the JSON response
   fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
   return fruityvice_normalized
-get_fruityvice_data("kiwi")
+
 streamlit.header('Fruity Fruit Advice!')
+streamlit.header(get_fruityvice_data("kiwi"))
 """
 try:
   fruit_choice = streamlit.text_input('What fruit would you like information about?')
