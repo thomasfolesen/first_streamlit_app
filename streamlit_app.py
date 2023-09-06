@@ -41,3 +41,11 @@ my_cur.execute("select * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
+
+#text input to po into pc_rivery_db database public schema fruit_load_list table
+add_my_fruit = streamlit.text_input('What fruit would you like to add?')
+my_cur.execute(
+    "INSERT add_my_fruit INTO fruit_load_list"
+)
+
+# put into snowflake db
