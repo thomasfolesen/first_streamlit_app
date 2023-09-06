@@ -42,7 +42,7 @@ try:
     streamlit.dataframe(back_from_function)
 
 #don't run anything under here while we troubleshoot
-streamlit.stop()
+#streamlit.stop()
 
 #snowflake
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
