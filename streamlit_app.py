@@ -42,13 +42,10 @@ my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
 
-#text input to po into pc_rivery_db database public schema fruit_load_list table
 #text input to recieve desired value
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
-#output inserted value
-streamlit.text(add_my_fruit)
 #insert value into fruit_load_list table
-my_cur.execute("INSERT INTO fruit_load_list VALUES "+ str(add_my_fruit))
+#my_cur.execute("INSERT INTO fruit_load_list VALUES "+ add_my_fruit)
 streamlit.text("Thank you for adding " + add_my_fruit)
 
 # put into snowflake db
