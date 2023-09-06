@@ -44,7 +44,7 @@ streamlit.dataframe(my_data_rows)
 
 #text input to po into pc_rivery_db database public schema fruit_load_list table
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
-streamlit.dataframe(add_my_fruit)
+streamlit.text(add_my_fruit)
 #my_cur.execute(
     #"INSERT INTO fruit_load_list(FRUIT_NAME) VALUES "+ add_my_fruit)
 
