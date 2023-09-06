@@ -31,7 +31,7 @@ def get_fruityvice_data(this_fruit_choice):
   #normalizing the JSON response
   fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
   return fruityvice_normalized
-
+get_fruityvice_data("kiwi")
 streamlit.header('Fruity Fruit Advice!')
 """
 try:
