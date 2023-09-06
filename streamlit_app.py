@@ -44,8 +44,8 @@ streamlit.dataframe(my_data_rows)
 
 #text input to recieve desired value
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
+#put value into fruit_load_list
+my_cure.execute(INSERT INTO FRUIT_LOAD_LIST VALUES ('from streamlit'))
 #insert value into fruit_load_list table
-#my_cur.execute("INSERT INTO fruit_load_list VALUES "+ add_my_fruit)
-streamlit.text("Thank you for adding " + add_my_fruit)
+streamlit.write("Thank you for adding " + add_my_fruit)
 
-# put into snowflake db
