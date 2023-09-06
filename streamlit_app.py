@@ -48,8 +48,7 @@ add_my_fruit = streamlit.text_input('What fruit would you like to add?')
 #output inserted value
 streamlit.text(add_my_fruit)
 #insert value into fruit_load_list table
-my_cur.execute(
-    "INSERT INTO fruit_load_list VALUES "+ add_my_fruit)
+my_cur.execute("INSERT INTO fruit_load_list VALUES "+ add_my_fruit)
 streamlit.text("Thank you for adding " + add_my_fruit)
 
 # put into snowflake db
