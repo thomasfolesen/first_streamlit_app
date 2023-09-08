@@ -42,6 +42,8 @@ try:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.text(back_from_function)
     #streamlit.dataframe(back_from_function)
+  except:
+    continue
 
 # don't run anything under here while we troubleshoot
 streamlit.stop()
