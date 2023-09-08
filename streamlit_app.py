@@ -45,13 +45,12 @@ try:
 except:
   pass
 
-# don't run anything under here while we troubleshoot
-#streamlit.stop()
+
 
 streamlit.header("The fruit load list contains:")
 #Snowflake-related functions
 def get_fruit_load_list():
-  with my_cnx.cursor as my_cur:
+  with my_cnx.cursor() as my_cur:
     my_cur.execute("select * from fruit_load_list")
     return my_cur.fetchall()
 
@@ -60,8 +59,8 @@ load_button_result = load_fruit = streamlit.button('Get Fruit Load List')
 streamlit.write(load_button_result)
 if load_button_result:
   my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-  #my_data_rows = get_fruit_load_list()
-  streamlit.dataframe(get_fruit_load_list())
+  my_data_rows = get_fruit_load_list()
+  streamlit.dataframe(my_data_rows)
 
 """
 # snowflake
