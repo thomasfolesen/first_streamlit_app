@@ -23,7 +23,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 # Display the table on the page.
 streamlit.dataframe(fruits_to_show)
-
+"""
 # display fruityvice api response function
 def get_fruityvice_data(this_fruit_choice):
   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
@@ -41,7 +41,7 @@ try:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.text(back_from_function)
     #streamlit.dataframe(back_from_function)
-
+"""
 # don't run anything under here while we troubleshoot
 streamlit.stop()
 
