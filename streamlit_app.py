@@ -43,7 +43,7 @@ try:
     streamlit.text(back_from_function)
     #streamlit.dataframe(back_from_function)
 except:
-  continue
+  break
 
 # don't run anything under here while we troubleshoot
 streamlit.stop()
